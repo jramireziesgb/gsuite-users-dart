@@ -1,40 +1,26 @@
 String removeTildes(String str) {
-  var conTildes = [
-    'á',
-    'é',
-    'í',
-    'ó',
-    'ú',
-    'ü',
-    'ñ',
-    'Á',
-    'É',
-    'Í',
-    'Ó',
-    'Ú',
-    'Ü',
-    'Ñ'
-  ];
-  var sinTildes = [
-    'a',
-    'e',
-    'i',
-    'o',
-    'u',
-    'u',
-    'n',
-    'A',
-    'E',
-    'I',
-    'O',
-    'U',
-    'U',
-    'N'
-  ];
+  var res = str;
 
-  for (var i = 0; i < conTildes.length; i++) {
-    str = str.replaceAll(conTildes[i], sinTildes[i]);
-  }
+  var tildes = {
+    'á': 'a',
+    'é': 'e',
+    'í': 'i',
+    'ó': 'o',
+    'ú': 'u',
+    'ü': 'u',
+    'ñ': 'n',
+    'Á': 'A',
+    'É': 'E',
+    'Í': 'I',
+    'Ó': 'O',
+    'Ú': 'U',
+    'Ü': 'U',
+    'Ñ': 'N',
+  };
 
-  return str;
+  tildes.forEach((k, v) {
+    res = res.replaceAll(k, v);
+  });
+
+  return res;
 }
