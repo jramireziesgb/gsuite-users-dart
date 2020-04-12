@@ -15,20 +15,17 @@ class UserToGsuite {
             .map((nombre) => nombre.substring(0, 1))
             .join()
             .toLowerCase() +
-        lastName
-            .split(' ')
-            .map((apellido) => apellido.substring(0, 3))
-            .join()
-            .toLowerCase());
+        lastName.split(' ').map((apellido) => apellido).join().toLowerCase());
+    _userName = _userName.length > 10 ? _userName.substring(0, 10) : _userName;
     _firstName = firstName;
     _lastName = lastName;
-    _emailAddress = _userName + '.' + sufijo + dominio;
+    _emailAddress = _userName + (sufijo != null ? '.$sufijo' : '') + dominio;
     _password = password;
     _orgUnitPath = orgUnitPath;
   }
 
   @override
   String toString() {
-    return '$_firstName, $_lastName, $_emailAddress, $_password, $_orgUnitPath';
+    return '$_firstName,$_lastName,$_emailAddress,$_password,$_orgUnitPath';
   }
 }
