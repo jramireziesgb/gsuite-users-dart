@@ -1,4 +1,4 @@
-import 'package:dart/funciones/textos.dart';
+import 'package:userstogsuite/funciones/textos.dart';
 
 class UserToGsuite {
   String _userName;

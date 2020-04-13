@@ -1,9 +1,10 @@
-import 'package:args/args.dart';
-import 'package:dart/clases/user_from_seneca.dart';
 import 'dart:io';
 import 'dart:convert';
 
-import 'package:dart/clases/user_to_gsuite.dart';
+import 'package:args/args.dart';
+
+import 'package:userstogsuite/clases/user_from_seneca.dart';
+import 'package:userstogsuite/clases/user_to_gsuite.dart';
 
 const programName = 'Generador de usuarios para GSuite desde Séneca';
 const programCmd = 'userstogsuite';
