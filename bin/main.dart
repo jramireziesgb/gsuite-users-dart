@@ -45,16 +45,7 @@ Future<int> main(List<String> arguments) async {
       abbr: 'v', negatable: false, help: 'Versión del programa.');
 
   try {
-    results = parser.parse([
-      '-f',
-      '/home/jramirez/dart/RegAlum.utf8.csv',
-      '-x',
-      'eso',
-      '-u',
-      '/Alumnos/ESO',
-      '-p',
-      'Alumno*2020'
-    ]);
+    results = parser.parse(arguments);
   } catch (e) {
     printAyuda(parser.usage);
     exit(1);
