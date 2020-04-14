@@ -8,8 +8,7 @@
       "name": "Dart",
       "program": "bin/main.dart",
       "request": "launch",
-      "type": "dart",
-      "args": ["-f", "/home/jramirez/gsuite-users/RegAlum.utf8.csv"]
+      "type": "dart"
     }
   ]
 }
