@@ -9,7 +9,7 @@ class UserToGsuite {
   String _orgUnitPath;
 
   UserToGsuite(String firstName, String lastName, String password,
-      String orgUnitPath, String sufijo, String dominio) {
+      String nIdEscolar, String orgUnitPath, String sufijo, String dominio) {
     _userName = removeTildes(firstName
             .split(' ')
             .map((nombre) => nombre.substring(0, 1))
@@ -17,6 +17,7 @@ class UserToGsuite {
             .toLowerCase() +
         lastName.split(' ').map((apellido) => apellido).join().toLowerCase());
     _userName = _userName.length > 10 ? _userName.substring(0, 10) : _userName;
+    _userName = _userName + nIdEscolar.substring(nIdEscolar.length - 3);
     _firstName = firstName;
     _lastName = lastName;
     _emailAddress = _userName + (sufijo != null ? '.$sufijo' : '') + dominio;
