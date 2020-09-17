@@ -75,7 +75,8 @@ Future<int> main(List<String> arguments) async {
         var alumno = UserFromSeneca(valores);
         print(UserToGsuite(
             alumno.Nombre,
-            alumno.Primerapellido + ' ' + alumno.Segundoapellido,
+            alumno.Primerapellido,
+            alumno.Segundoapellido,
             alumno.DNI == '' ? results['passwd'] : alumno.DNI,
             alumno.NIdEscolar,
             results['unidad'] ?? '/',
