@@ -14,6 +14,22 @@ $ iconv -f "windows-1252" -t "UTF-8" RegAlum.csv > RegAlum.utf8.csv
 
 ## Uso
 
+Generador de usuarios para GSuite desde Séneca
+
+uso: userstogsuite -f <fichero.csv> [-d <dominio>] [-x <sufijo>] [-u <unidad>] [-v]
+
+-f, --file       Nombre del fichero .csv exportado de Séneca con todos los campos.
+-d, --domain     Domino de las cuentas.
+                 (defaults to "@iesgbrenan.com")
+-x, --suffix     Sufijo para los nombres de usuarios en las cuentas de correo electónico.
+-u, --unidad     Unidad organizativa de las cuentas.
+                 (defaults to "/Alumnos")
+-p, --passwd     Contraseña por defecto para los alumnos que no tienen DNI.
+                 (defaults to "12345678A")
+-v, --version    Versión del programa.
+
+Ejemplo:
+
 - RegAlum.csv: es el fichero que genera Séneca con los alumnos que vamos a importar.
 
 - listado-gsuite.csv: es el fichero que importaremos en GSuite.
