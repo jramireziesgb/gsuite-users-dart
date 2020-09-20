@@ -10,7 +10,7 @@ const programName = 'Generador de usuarios para GSuite desde Séneca';
 const programCmd = 'userstogsuite';
 const uso =
     'uso: $programCmd -f <fichero.csv> [-d <dominio>] [-x <sufijo>] [-u <unidad>] [-v]\n';
-const version = '1.0.0';
+const version = '1.1.0';
 
 void printAyuda(String flags) {
   print('$programName\n');
