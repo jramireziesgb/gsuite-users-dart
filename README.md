@@ -16,7 +16,8 @@ $ iconv -f "windows-1252" -t "UTF-8" RegAlum.csv > RegAlum.utf8.csv
 
 Generador de usuarios para GSuite desde Séneca
 
-uso: userstogsuite -f <fichero.csv> [-d <dominio>] [-x <sufijo>] [-u <unidad>] [-v]
+```bash
+userstogsuite -f <fichero.csv> [-d <dominio>] [-x <sufijo>] [-u <unidad>] [-v]
 
 -f, --file       Nombre del fichero .csv exportado de Séneca con todos los campos.
 -d, --domain     Domino de las cuentas.
@@ -27,6 +28,7 @@ uso: userstogsuite -f <fichero.csv> [-d <dominio>] [-x <sufijo>] [-u <unidad>] [
 -p, --passwd     Contraseña por defecto para los alumnos que no tienen DNI.
                  (defaults to "12345678A")
 -v, --version    Versión del programa.
+````
 
 Ejemplo:
 
